@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF8"/>
+        <script src="https://kit.fontawesome.com/9a65daed90.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <i class="fas fa-angle-left"></i>
+            <p>Playlist - RnB</p>
+            <i class="fas fa-ellipsis-v"></i>
+        </header>
+
+        <main class="container">
+            <section class="categories">
+                <aside class="playlist">
+                    <div onclick="songPlaying(0)" class="content">
+                        <div class="album">
+                            <img class="picture" src="https://upload.wikimedia.org/wikipedia/en/4/4f/H.E.R._%282017%29_album_cover.jpg";>
+                        </div>
+                        <div class="text">
+                            <h1 class="songArtist">H.E.R</h1>
+                            <p class="songTitle">Losing</p>
+                        </div>
+                        <div class="button playlist-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="playlist">
+                    <div onclick="songPlaying(1)" class="content">
+                        <div class="album">
+                            <img class="picture" src="https://upload.wikimedia.org/wikipedia/en/2/27/I_Used_to_Know_Her%2C_The_Prelude_%282018%29_album_cover.jpg";>
+                        </div>
+                        <div class="text">
+                            <h1 class="songArtist">H.E.R</h1>
+                            <p class="songTitle">Avenue</p>
+                        </div>
+                        <div class="button playlist-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="playlist">
+                    <div onclick="songPlaying(2)" class="content">
+                        <div class="album">
+                            <img class="picture" src="https://upload.wikimedia.org/wikipedia/en/4/4f/H.E.R._%282017%29_album_cover.jpg";>
+                        </div>
+                        <div class="text">
+                            <h1 class="songArtist">H.E.R</h1>
+                            <p class="songTitle">Hard Place</p>
+                        </div>
+                        <div class="button playlist-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="playlist">
+                    <div onclick="songPlaying(3)" class="content">
+                        <div class="album">
+                            <img class="picture" src="https://upload.wikimedia.org/wikipedia/en/2/27/I_Used_to_Know_Her%2C_The_Prelude_%282018%29_album_cover.jpg";>
+                        </div>
+                        <div class="text">
+                            <h1 class="songArtist">H.E.R</h1>
+                            <p class="songTitle">Focus</p>
+                        </div>
+                        <div class="button playlist-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="playlist">
+                    <div onclick="songPlaying(4)" class="content">
+                        <div class="album">
+                            <img class="picture" src="https://upload.wikimedia.org/wikipedia/en/4/4f/H.E.R._%282017%29_album_cover.jpg";>
+                        </div>
+                        <div class="text">
+                            <h1 class="songArtist">H.E.R</h1>
+                            <p class="songTitle">Best Part</p>
+                        </div>
+                        <div class="button playlist-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="playlist">
+                    <div onclick="songPlaying(5)"  class="content">
+                        <div class="album">
+                            <img class="picture" src="https://upload.wikimedia.org/wikipedia/en/2/27/I_Used_to_Know_Her%2C_The_Prelude_%282018%29_album_cover.jpg";>
+                        </div>
+                        <div class="text">
+                            <h1 class="songArtist">H.E.R</h1>
+                            <p class="songTitle">Changes</p>
+                        </div>
+                        <div class="button playlist-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="categories">
+                <aside class="player">
+                    <div class="album-cover">
+                        <img class="cover" src="https://upload.wikimedia.org/wikipedia/en/4/4f/H.E.R._%282017%29_album_cover.jpg";>
+                    </div>  
+                </aside>
+
+                <aside class="player">
+                    <div class="song-info">
+                        <div class="button">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="text2">
+                            <h1 class="songArtist2">H.E.R</h1>
+                            <p class="songTitle2">Losing</p>
+                        </div>
+                        <div class="button">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside class="player">
+                    <audio id="musicPlayer" controls>
+                    </audio>
+                        <div class="timeline">
+                            <div class="progress">
+                                <p class="time">0:00</p>
+                            </div>
+                            <div class="playtime"> 
+                                <div class="music-bar">
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <p class="time2">3:59</p>
+                            </div>
+                        <</div>
+
+                </aside>
+
+                <aside class="player">
+                    <div class="play">
+                        <div class="button button-repeat">
+                            <i class="fas fa-sync"></i>
+                        </div>
+
+                        <div class="button">
+                            <div onclick="prevSong()" class="button">
+                                <i class="fas fa-backward backward"></i>
+                            </div>
+                            <div onclick="playPause()" class="button">
+                                <i class="fas fa-pause-circle pause-button"></i>
+                                <i class="fas fa-play-circle play-button"></i>
+                            </div>
+                            <div onclick="nextSong()" class="button">
+                                <i class="fas fa-forward forward"></i>
+                            </div>
+                        </div>
+
+                        <div class="button button-shuffle">
+                            <i class="fas fa-random"></i>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+        </main>
+    </body>
+
+    <script src="player.js"></script>
+</html>
