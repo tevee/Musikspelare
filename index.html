@@ -130,26 +130,27 @@
                 </aside>
 
                 <aside class="player">
-                    <audio id="musicPlayer" controls>
+                    <audio id="musicPlayer" controls ontimeupdate="updateSongTime()">
                     </audio>
                         <div class="timeline">
                             <div class="progress">
-                                <p class="time">0:00</p>
+                                <p class="time">00:00</p>
                             </div>
                             <div class="playtime"> 
                                 <div class="music-bar">
+                                    <div class="music-bar-progress"></div>
                                 </div>
                             </div>
                             <div class="progress">
-                                <p class="time2">3:59</p>
+                                <p class="time2">00:00</p>
                             </div>
-                        <</div>
+                        </div>
 
                 </aside>
 
                 <aside class="player">
                     <div class="play">
-                        <div class="button button-repeat">
+                        <div onclick="repeat()" class="button button-repeat">
                             <i class="fas fa-sync"></i>
                         </div>
 

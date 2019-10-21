@@ -1,3 +1,6 @@
+/*  Sätt display: none; på audio objektet i inspektorn
+    för att spola fram låten när man undersöker repeat knappen
+*/
 let index;
 
 let songs = [
@@ -64,5 +67,58 @@ function nextSong() {
 }
 
 function prevSong() {
-    musicPlayer.currentTime = 0;
+    if (musicPlayer.currentTime < 5) {
+        songPlaying(index - 1);
+    } 
+    else {
+        musicPlayer.currentTime = 0;
+    }
+
+}
+
+function updateSongTime() {
+    let startTime = document.getElementsByClassName("time")[0];
+    let endTime = document.getElementsByClassName("time2")[0];
+    let musicBarProgress = document.getElementsByClassName("music-bar-progress")[0];
+
+    let musicStartTime = Math.floor(musicPlayer.currentTime).toString();
+    let musicEndTime = Math.floor(musicPlayer.duration).toString();
+
+    startTime.innerHTML = formatSecondsAsTime(musicStartTime);
+
+    if (isNaN(musicEndTime)) {
+        endTime.innerHTML = '00:00';
+    }
+    else {
+        endTime.innerHTML = formatSecondsAsTime(musicEndTime);
+    }
+
+    musicBarProgress.style.width = Math.floor((musicStartTime / musicEndTime) * 100) + "%";
+}
+
+function formatSecondsAsTime(seconds) {
+    let min = Math.floor(seconds / 60);
+    let sec = Math.floor(seconds - (min * 60)); 
+
+    if (min < 10) {
+        min = "0" + min;
+    }
+    if (sec < 10) {
+        sec = "0" + sec;
+    }
+
+    return min + ':' + sec;
+}
+
+function repeat() {
+    let btnRepeat = document.getElementsByClassName("button-repeat")[0];
+
+    musicPlayer.loop = !musicPlayer.loop;
+
+    if (musicPlayer.loop) {
+        btnRepeat.style.opacity = "0.3";
+    }
+    else {
+        btnRepeat.style.opacity = "1";
+    }
 }
